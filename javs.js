@@ -1,3 +1,5 @@
+// https://circleci.com/blog/ci-cd-for-js-iifes/#prerequisites
+
 // named functions
 (function myFunc() {
     // Beginning of function
@@ -8,4 +10,4 @@
 // arrow functions
 (() => console.log('arrow functions'))();
 
-(function (){ console.log('annonyms functions')})();
+(function (){ console.log('anonymous functions')})();
