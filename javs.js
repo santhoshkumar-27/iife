@@ -11,4 +11,20 @@ const greeting = "Hello world";
 // arrow functions
 (() => console.log('arrow functions'))();
 
-(function (){ console.log('anonymous functions')})();
+(function () { console.log('anonymous functions') })();
+
+
+const friendlyFunction = (function () {
+    let greetCount = 0;
+    return function () {
+        console.log(`Hello ${greetCount}x`);
+        return greetCount++;
+    };
+})();
+
+
+console.log('friendlyFunction', friendlyFunction())
+console.log('friendlyFunction', friendlyFunction())
+var greetCount = 9; // because the iife as different scope
+console.log('friendlyFunction', friendlyFunction())
+console.log('friendlyFunction', friendlyFunction())
